@@ -7,7 +7,9 @@ main {
   font-family: 'Inter', sans-serif;
   font-size: 0.9375em;
   padding: 1rem;
-
+  max-width: 736px;
+  display: grid;
+  margin: auto;
 }
 
 .noticias-secao {
@@ -67,6 +69,13 @@ main {
 }
 
 .noticia-destaque {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  line-height: 20px;
+}
+
+.container-destaque {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -175,7 +184,7 @@ main {
 /* navbar mobile */
 
 .navbar-mobile {
-  position: absolute;
+  position: fixed;
   top: 0;
   background-color: #fff;
   height: 100vh;
@@ -213,6 +222,7 @@ a {
 @media (min-width: 1024px) {
   main {
     padding: 5rem;
+    max-width: 1280px;
   }
 
   .navbar-mobile {
@@ -267,6 +277,7 @@ a {
 
   .top-noticias-lista {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .nav-desktop {
