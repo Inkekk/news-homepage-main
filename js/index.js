@@ -1,5 +1,5 @@
-const botaoMenu = document.querySelector(".menu");
-const sidebarMenu = document.querySelector(".navbar-mobile");
+const botaoMenu = document.querySelector(".botao-menu");
+const sidebarMenu = document.querySelector(".navbar");
 const botaoFechar = document.querySelector(".menu-fechar");
 const overlay = document.querySelector(".overlay");
 const body = document.querySelector("body");

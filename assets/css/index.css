@@ -1,15 +1,14 @@
 /* Geral */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
-
-
-main {
+body {
+  padding: 1rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.9375em;
-  padding: 1rem;
-  max-width: 736px;
   display: grid;
+  place-items: center;
   margin: auto;
+  max-width: 736px
 }
 
 .noticias-secao {
@@ -33,6 +32,7 @@ main {
 /* Cabecalho */
 
 .cabecalho {
+  width: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -42,15 +42,15 @@ main {
 .logo,
 .menu {
   width: 40px;
+  background: none;
+  border-style: none;
 }
 
 .menu {
   height: 15px;
 }
 
-.nav-desktop {
-  display: none;
-}
+
 
 /* Noticia destaque */
 
@@ -110,7 +110,8 @@ main {
 }
 
 .novos-secao .title {
-  font-size: 1.6em;
+  font-size: 1.8em;
+  font-weight: 600;
   color: hsl(35, 77%, 62%);
 }
 
@@ -181,9 +182,10 @@ main {
   color: hsl(236, 13%, 80%);
 }
 
+
 /* navbar mobile */
 
-.navbar-mobile {
+.navbar {
   position: fixed;
   top: 0;
   background-color: #fff;
@@ -205,7 +207,7 @@ main {
   align-self: flex-end;
 }
 
-.navbar-mobile-lista {
+.navbar ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -220,13 +222,21 @@ a {
 /* desktop */
 
 @media (min-width: 1024px) {
-  main {
+  body {
     padding: 5rem;
     max-width: 1280px;
   }
 
-  .navbar-mobile {
-    display: none;
+  .novos-secao .title {
+    font-size: 30px;
+  }
+
+  .noticia-descricao {
+    font-size: 17px;
+  }
+
+  .noticia-item {
+    justify-content: space-between;
   }
 
   .noticias-secao {
@@ -280,21 +290,32 @@ a {
     justify-content: space-between;
   }
 
-  .nav-desktop {
-    display: block;
+
+  .navbar {
+    position: initial;
+    width: max-content;
+    height: max-content;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
   }
 
-  .navbar-desktop-lista {
+  .top-noticia-desc {
     display: flex;
-    gap: 25px;
+    flex-direction: column;
   }
 
-  .navbar-desktop-lista li a {
+  .navbar ul {
+    flex-direction: row;
+
+  }
+
+  .navbar ul li a {
     color: hsl(236, 13%, 58%);
     font-size: 14px;
   }
 
-  .navbar-desktop-lista li a:hover {
+  .navbar ul li a:hover {
     color: hsl(5, 85%, 63%);
     transition: .3s;
   }
